@@ -13,8 +13,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://projeto-matematica-discreta-criptografia-production.up.railway.app/mdproject/',
+    'https://projeto-matematica-discreta-criptografia-production.up.railway.app',
+    'https://projeto-matematica-discreta-criptografia-production.up.railway.app/mdproject',
+    'http://projeto-matematica-discreta-criptografia-production.up.railway.app',
+    'http://projeto-matematica-discreta-criptografia-production.up.railway.app/mdproject',
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
